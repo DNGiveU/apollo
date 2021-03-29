@@ -1,7 +1,6 @@
 package com.ctrip.framework.apollo.internals;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 import com.ctrip.framework.apollo.core.ConfigConsts;
 import com.ctrip.framework.apollo.core.enums.Env;
@@ -27,12 +26,4 @@ public class DefaultMetaServerProviderTest {
     assertEquals(someMetaAddress, defaultMetaServerProvider.getMetaServerAddress(someEnv));
   }
 
-  @Test
-  public void testWithNoSystemProperty() throws Exception {
-    Env someEnv = Env.DEV;
-
-    DefaultMetaServerProvider defaultMetaServerProvider = new DefaultMetaServerProvider();
-
-    assertNull(defaultMetaServerProvider.getMetaServerAddress(someEnv));
-  }
 }
